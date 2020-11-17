@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:vendr/utility/screen_util.dart';
 import 'package:vendr/utility/size_constants.dart';
 
 import 'componenets/ads_banner.dart';
+import 'componenets/bottom_nav_bar.dart';
 import 'componenets/category_stories.dart';
+import 'componenets/title_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -22,26 +25,19 @@ class HomeScreen extends StatelessWidget {
           title: Container(height: 37, child: buildSearchField()),
           centerTitle: true,
         ),
+        bottomNavigationBar: BottomNavBar(),
         body: SingleChildScrollView(
           child: Column(
             children: [
               AdsBanner(),
               SizedBox(height: Sizes.dimen_10.h),
               CategoryStories(),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: Sizes.dimen_6.h),
-                padding: EdgeInsets.symmetric(horizontal: Sizes.dimen_6.h),
+              SizedBox(
+                width: ScreenUtil.screenWidth * 0.9,
                 child: Image.asset('assets/xiaomiAd.png'),
               ),
-              Container(
-                width: double.infinity,
-                child: Text('مُقترحة لك',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline6
-                        .copyWith(fontWeight: FontWeight.w700, color: Color(0xff424652)),
-                    textAlign: TextAlign.right),
-              ),
+              SizedBox(height: Sizes.dimen_6.h),
+              TitleWidget('مُقترحة لك'),
               Container()
             ],
           ),

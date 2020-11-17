@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendr/utility/screen_util.dart';
 import 'package:vendr/utility/scroll_behavior.dart';
 
 import 'story_photo_container.dart';
@@ -7,7 +8,7 @@ class CategoryStories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 10),
+      margin: EdgeInsets.only(right: ScreenUtil.screenWidth * 0.05),
       height: 120,
       child: ScrollConfiguration(
         behavior: MyBehavior(),
