@@ -14,21 +14,21 @@ class HomeScreen extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: Colors.white,
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white70,
           leading: Container(
             margin: EdgeInsets.only(right: 5),
             child: Image(image: AssetImage('assets/logo.png'), height: 40),
           ),
           leadingWidth: 80,
           title: Container(height: 37, child: buildSearchField()),
-          centerTitle: true,
         ),
         bottomNavigationBar: BottomNavBar(),
         body: SingleChildScrollView(
           child: Column(
             children: [
+              Container(color: Colors.white, height: 57 + ScreenUtil.statusBarHeight),
               AdsBanner(),
               SizedBox(height: Sizes.dimen_10.h),
               CategoryStories(),
@@ -38,7 +38,9 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: Sizes.dimen_6.h),
               TitleWidget('مُقترحة لك'),
-              Container()
+              Container(
+                height: 700,
+              )
             ],
           ),
         ),

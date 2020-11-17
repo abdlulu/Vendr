@@ -19,6 +19,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return BottomNavigationBar(
       selectedFontSize: 12,
       unselectedFontSize: 11,
+      selectedIconTheme: IconThemeData(size: 30),
+      unselectedIconTheme: IconThemeData(size: 26),
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.white,
       items: const <BottomNavigationBarItem>[

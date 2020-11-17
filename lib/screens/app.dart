@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'Cairo',
           visualDensity: VisualDensity.adaptivePlatformDensity,
+          appBarTheme: AppBarTheme(color: Color(0xeeffffff)),
           textTheme: TextTheme(
             // bodyText1: TextStyle(),
             bodyText2: TextStyle(color: Color(0xff8d8f9c)),
